@@ -60,7 +60,9 @@ defmodule Ex01 do
   # no explicit + operators in your function                          #
   #####################################################################
 
+  # sum3a = fn (num1, num2, num3) -> sum2a.(sum2a.(num1, num2), num3) end
   sum3a = fn (num1, num2, num3) -> sum2a.(num1, num2) |> sum2a.(num3) end
+
 
   assert sum3a.(1, 3, 5)  == 9
   assert sum3a.(1, -3, 5) == 3
