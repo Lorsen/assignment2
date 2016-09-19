@@ -173,7 +173,8 @@ defmodule Ex03 do
       {mark, _, _, _, mark, _, _, _, mark } -> mark
       {_, _, mark, _, mark, _, mark, _, _ } -> mark
 
-      _                                     -> false
+      #Originally had false matching  -> mark, but it looked odd to me
+      _ -> false
 
     end
   end
