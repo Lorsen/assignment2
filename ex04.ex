@@ -39,9 +39,8 @@ defmodule Ex04 do
       [ 1, 2, 3, 4, 5 ]
 
   """
-  def reverse([]), do: []
-  def reverse(list) do
-    reduce(list, [], &[&1|&2])
+  def reverse(number_list) do
+    reduce(number_list, [], &[&1|&2])
   end
 
   ##############################################################################
@@ -58,9 +57,9 @@ defmodule Ex04 do
 
   """
 
-  def min([]), do:[]
-  def min(list), do
-    reduce(list, [], &[&1|&2])
+
+  def min(number_list) do
+    reduce(number_list, &(if &1 < &2, do: &1, else: &2))
   end
 
 
@@ -82,8 +81,14 @@ defmodule Ex04 do
   return value will be the thing you have to manipulate.
   """
 
-  def even_odd([]), do:[]
+#  def reduce([ h | t ],  func),        do: reduce(t, h, func)
+#  def reduce([ ], state, _func),       do: state
+#  def reduce([ h | t ], state, func),  do: reduce(t, func.(h, state), func)
 
+  # def even_odd(number_list) do
+  #   reduce
+  # end
+  #still working on this one
 
 
 

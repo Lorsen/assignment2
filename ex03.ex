@@ -157,7 +157,7 @@ defmodule Ex03 do
   """
 
   def won(mark) do
-    case mark do
+    case mark do 
 
       #Horizontal Wins
       {mark, mark, mark, _, _, _, _, _, _ } -> mark
