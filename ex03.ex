@@ -55,7 +55,9 @@ defmodule Ex03 do
 
   """
 
-  def odd_even . . . "your code"
+  def odd_even(number_list), do:
+    Enum.map(number_list, &(if Integer.is_odd(&1), do: :odd, else: :even))
+  end
 
 
   ##############################################################################
@@ -77,7 +79,9 @@ defmodule Ex03 do
 
   """
 
-  def list_contains . .. "your code"
+  def list_contains(number_list, test_num) do
+    Enum.member?(number_list, test_num)
+  end
 
   ##############################################################################
   # 3.3:  5 points #
@@ -101,10 +105,10 @@ defmodule Ex03 do
 
   """
 
-  def list_equal . . . "your code"
-
-
-
+  def list_equal([], []), do: true
+  def list_equal( [ head | tail ] , [ head | tail ]), do: true
+  def list_equal([head1 | _ ] , [head2, _]), do: false
+  def list_equal([head | tail1] , [head | tail2] ), do: false
   ##############################################################################
   # 3.4:  5 points #
   ##################
